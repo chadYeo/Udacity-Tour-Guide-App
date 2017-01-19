@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tour Guide App: Nassau County, NY</string>
+
+    <!-- TabLayout Title Text -->
+    <string name="category_restaurant">Restaurant</string>
+    <string name="category_park">Park</string>
+    <string name="category_mansion">Mansion</string>
+    <string name="category_beach">Beach</string>
+
+</resources>
