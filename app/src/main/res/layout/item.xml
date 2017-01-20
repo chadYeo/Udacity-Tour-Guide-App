@@ -3,41 +3,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="5dp">
 
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_gravity="center_vertical" />
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             tools:text="Loacation"
-            android:id="@+id/location_textView"
-            android:layout_gravity="right" />
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/location_textView" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            tools:text="Description"
-            android:id="@+id/description_textView" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             tools:text="Address"
-            android:id="@+id/address_textView" />
+            android:textSize="12sp"
+            android:id="@+id/address_textView"
+            android:paddingTop="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Description"
+            android:id="@+id/description_textView"
+            android:paddingTop="4dp" />
+
     </LinearLayout>
 
 

@@ -1,6 +1,7 @@
 package android.example.com.tourguideapp;
 
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -28,10 +29,45 @@ public class ParksFragment extends Fragment {
 
         ArrayList<Item> items = new ArrayList<Item>();
 
-        items.add(new Item("Bethpage State Park", "Large park featuring 5 golf courses, hiking & biking trails & picnic facilities.", "99 Quaker Meeting House Rd, Farmingdale, NY 11735", R.raw.bethpage_state_park));
-        items.add(new Item("Hempstead Lake State Park", "Tranquil park with playgrounds, equestrian, biking & hiking trails & an old-school wooden carousel", "Eagle Ave, West Hempstead, NY 11552", R.raw.hempstead_lake_state_park));
-        items.add(new Item("Theodore Roosevelt Memorial Park", "Bayside park with athletic fields & courts, playgrounds, boat ramps & a beach on Oyster Bay Harbor.", "West End Ave, Oyster Bay, NY 11771", R.raw.theodore_roosevelt_memorial_park));
-        items.add(new Item("Wantagh Park", "Large green space featuring athletic fields, playgrounds, a fishing pier & an outdoor pool.", "1 King Rd, Wantagh, NY 11793", R.raw.wantagh_park));
+        Location bethpageStatePark = new Location(getString(R.string.park_bethpage_name));
+        bethpageStatePark.setLatitude(40.745672);
+        bethpageStatePark.setLongitude(-73.456324);
+
+        items.add(new Item(getString(R.string.park_bethpage_name),
+                getString(R.string.park_bethpage_description),
+                getString(R.string.park_bethpage_address),
+                R.raw.bethpage_state_park,
+                bethpageStatePark));
+
+        Location hempsteadLakeStatePark = new Location(getString(R.string.park_hempsteadLake_name));
+        hempsteadLakeStatePark.setLatitude(40.683058);
+        hempsteadLakeStatePark.setLongitude(-73.643106);
+
+        items.add(new Item(getString(R.string.park_hempsteadLake_name),
+                getString(R.string.park_hempsteadLake_description),
+                getString(R.string.park_hempsteadLake_address),
+                R.raw.hempstead_lake_state_park,
+                hempsteadLakeStatePark));
+
+        Location theodoreRooseveltMemorialpark = new Location(getString(R.string.park_theodoreRoosevelt_name));
+        theodoreRooseveltMemorialpark.setLatitude(40.875818);
+        theodoreRooseveltMemorialpark.setLongitude(-73.537075);
+
+        items.add(new Item(getString(R.string.park_theodoreRoosevelt_name),
+                getString(R.string.park_theodoreRoosevelt_description),
+                getString(R.string.park_theodoreRoosevelt_address),
+                R.raw.theodore_roosevelt_memorial_park,
+                theodoreRooseveltMemorialpark));
+
+        Location wantaghPark = new Location(getString(R.string.park_wantagh_name));
+        wantaghPark.setLatitude(40.648297);
+        wantaghPark.setLongitude(-73.511324);
+
+        items.add(new Item(getString(R.string.park_wantagh_name),
+                getString(R.string.park_wantagh_description),
+                getString(R.string.park_wantagh_address),
+                R.raw.wantagh_park,
+                wantaghPark));
 
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 

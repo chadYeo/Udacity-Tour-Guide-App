@@ -1,6 +1,7 @@
 package android.example.com.tourguideapp;
 
 
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -28,9 +29,35 @@ public class MansionsFragment extends Fragment {
 
         ArrayList<Item> items = new ArrayList<Item>();
 
-        items.add(new Item("Clark Botanic Garden", "The Clark Botanic Garden is a botanical garden located on Long Island", "193 I. U. Willets Rd, Albertson, New York", R.raw.clark_botanic_garden));
-        items.add(new Item("Old Westbury Gardens", "200-acre property offers a historic mansion amid formal botanical gardens, with daily guided tours.", "71 Old Westbury Rd, Westbury, NY 11590", R.raw.old_westbury_gardens));
-        items.add(new Item("Sagamore Hill", "Former home of Theodore Roosevelt with museum, nature trails, beach & visitor center on 83 acres.", "20 Sagamore Hill Rd, Oyster Bay, NY 11771", R.raw.sagamore_hill));
+        Location clarkBotanicGarden = new Location(getString(R.string.mansion_clarkBotanic_name));
+        clarkBotanicGarden.setLatitude(40.772124);
+        clarkBotanicGarden.setLongitude(-73.640853);
+
+        items.add(new Item(getString(R.string.mansion_clarkBotanic_name),
+                getString(R.string.mansion_clarkBotanic_description),
+                getString(R.string.mansion_clarkBotanic_address),
+                R.raw.clark_botanic_garden,
+                clarkBotanicGarden));
+
+        Location oldWestburyGardens = new Location(getString(R.string.mansion_oldWestbury_name));
+        oldWestburyGardens.setLatitude(40.773184);
+        oldWestburyGardens.setLongitude(-73.596776);
+
+        items.add(new Item(getString(R.string.mansion_oldWestbury_name),
+                getString(R.string.mansion_oldWestbury_description),
+                getString(R.string.mansion_oldWestbury_address),
+                R.raw.old_westbury_gardens,
+                oldWestburyGardens));
+
+        Location sagamoreHill = new Location(getString(R.string.mansion_sagamore_name));
+        sagamoreHill.setLatitude(40.885529);
+        sagamoreHill.setLongitude(-73.501030);
+
+        items.add(new Item(getString(R.string.mansion_sagamore_name),
+                getString(R.string.mansion_sagamore_description),
+                getString(R.string.mansion_sagamore_address),
+                R.raw.sagamore_hill,
+                sagamoreHill));
 
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 

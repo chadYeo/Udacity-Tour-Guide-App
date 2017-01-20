@@ -34,7 +34,7 @@ public class ItemAdapter extends ArrayAdapter<Item>{
         Item currentItem = getItem(position);
 
         TextView locationTextView = (TextView) listItemView.findViewById(R.id.location_textView);
-        locationTextView.setText(currentItem.getLocation());
+        locationTextView.setText(currentItem.getAttraction());
 
         TextView descriptionTextView = (TextView) listItemView.findViewById(R.id.description_textView);
         descriptionTextView.setText(currentItem.getDescription());

@@ -7,4 +7,68 @@
     <string name="category_mansion">Mansion</string>
     <string name="category_beach">Beach</string>
 
+
+    <!-- Beach Fragment Items -->
+    <string name="bar_beach_name">Bar Beach</string>
+    <string name="bar_beach_description">Upper Long Island Beach</string>
+    <string name="bar_beach_address">Bar Beach, Port Washington, NY 11050</string>
+
+    <string name="lido_beach_name">Lido Beach</string>
+    <string name="lido_beach_description">Lido Beach is a hamlet and census-designated place in Nassau County, New York, United States.</string>
+    <string name="lido_beach_address">Lido Beach, NY</string>
+
+    <string name="tobay_beach_name">Tobay Beach</string>
+    <string name="tobay_beach_description">Tobay Beach is a restricted access recreational beach located in the middle of Jones Beach Island, a barrier island off the South Shore of Long Island, New York in Nassau County</string>
+    <string name="tobay_beach_address">Tobay Beach, New York</string>
+
+
+    <!-- Mansions Fragment Items -->
+    <string name="mansion_clarkBotanic_name">Clark Botanic Garden</string>
+    <string name="mansion_clarkBotanic_description">The Clark Botanic Garden is a botanical garden located on Long Island</string>
+    <string name="mansion_clarkBotanic_address">193 I. U. Willets Rd, Albertson, New York</string>
+
+    <string name="mansion_oldWestbury_name">Old Westbury Gardens</string>
+    <string name="mansion_oldWestbury_description">200-acre property offers a historic mansion amid formal botanical gardens, with daily guided tours.</string>
+    <string name="mansion_oldWestbury_address">71 Old Westbury Rd, Westbury, NY 11590</string>
+
+    <string name="mansion_sagamore_name">Sagamore Hill</string>
+    <string name="mansion_sagamore_description">Former home of Theodore Roosevelt with museum, nature trails, beach and visitor center on 83 acres.</string>
+    <string name="mansion_sagamore_address">20 Sagamore Hill Rd, Oyster Bay, NY 11771</string>
+
+
+    <!-- Parks Fragment Items -->
+    <string name="park_bethpage_name">Bethpage State Park</string>
+    <string name="park_bethpage_description">Large park featuring 5 golf courses, hiking \u0026 biking trails \u0026 picnic facilities.</string>
+    <string name="park_bethpage_address">99 Quaker Meeting House Rd, Farmingdale, NY 11735</string>
+
+    <string name="park_hempsteadLake_name">Hempstead Lake State Park</string>
+    <string name="park_hempsteadLake_description">Tranquil park with playgrounds, equestrian, biking \u0026 hiking trails \u0026 an old-school wooden carousel</string>
+    <string name="park_hempsteadLake_address">Eagle Ave, West Hempstead, NY 11552</string>
+
+    <string name="park_theodoreRoosevelt_name">Theodore Roosevelt Memorial Park</string>
+    <string name="park_theodoreRoosevelt_description">Bayside park with athletic fields \u0026 courts, playgrounds, boat ramps \u0026 a beach on Oyster Bay Harbor.</string>
+    <string name="park_theodoreRoosevelt_address">West End Ave, Oyster Bay, NY 11771</string>
+
+    <string name="park_wantagh_name">Wantagh Park</string>
+    <string name="park_wantagh_description">Large green space featuring athletic fields, playgrounds, a fishing pier \u0026 an outdoor pool.</string>
+    <string name="park_wantagh_address">1 King Rd, Wantagh, NY 11793</string>
+
+
+    <!-- Restaurants Fragment Items -->
+    <string name="restaurant_churrasqueiraBairradaRestaurant_name">Churrasqueira Bairrada Restaurant</string>
+    <string name="restaurant_churrasqueiraBairradaRestaurant_description">Portuguese rodizio offering sizzling grilled-meat skewers \u0026 other traditional fare.</string>
+    <string name="restaurant_churrasqueiraBairradaRestaurant_address">44 Jericho Turnpike, Mineola, NY 11501</string>
+
+    <string name="restaurant_sangria71_name">Sangria 71</string>
+    <string name="restaurant_sangria71_description">Sophisticated restaurant offering refined Spanish dishes, including paella, along with sangria.</string>
+    <string name="restaurant_sangria71_address">71 Hillside Avenue, Williston Park, NY 11596</string>
+
+    <string name="restaurant_vincentsClamBar_name">Vincent\u0027s Clam Bar</string>
+    <string name="restaurant_vincentsClamBar_description">A Manhattan Little Italy transplant \u0026 bustling old-school spot for fresh seafood \u0026 red-sauce pasta</string>
+    <string name="restaurant_vincentsClamBar_address">179 Old Country Rd, Carle Place, NY 11514</string>
+
+    <string name="restaurant_plattdeutschePark_name">Plattdeutsche Park</string>
+    <string name="restaurant_plattdeutschePark_description">Authentic German cuisine, live music \u0026 festivals draw crowds to this historic eatery \u0026 beer garden.</string>
+    <string name="restaurant_plattdeutschePark_address">1132 Hempstead Turnpike, Franklin Square, NY 11010</string>
+
 </resources>
