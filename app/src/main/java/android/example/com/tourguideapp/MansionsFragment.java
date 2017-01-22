@@ -1,12 +1,15 @@
 package android.example.com.tourguideapp;
 
 
+import android.content.Intent;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -27,7 +30,7 @@ public class MansionsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_of_items, container, false);
 
-        ArrayList<Item> items = new ArrayList<Item>();
+        final ArrayList<Item> items = new ArrayList<Item>();
 
         Location clarkBotanicGarden = new Location(getString(R.string.mansion_clarkBotanic_name));
         clarkBotanicGarden.setLatitude(40.772124);
@@ -65,7 +68,27 @@ public class MansionsFragment extends Fragment {
 
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                double latitude = items.get(position).getLocation().getLatitude();
+                double longitude = items.get(position).getLocation().getLongitude();
+                String keyword = items.get(position).getAttraction();
+
+                String data = String.format("geo: %s,%s ?q=%s", latitude, longitude, keyword);
+                Uri geoLocation = Uri.parse(data);
+
+                showMap(geoLocation);
+            }
+        });
         return rootView;
     }
-
+    public void showMap(Uri geoLocation) {
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW);
+        mapIntent.setData(geoLocation);
+        if (mapIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivity(mapIntent);
+        }
+    }
 }

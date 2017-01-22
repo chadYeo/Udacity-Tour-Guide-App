@@ -1,12 +1,15 @@
 package android.example.com.tourguideapp;
 
 
+import android.content.Intent;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -25,7 +28,7 @@ public class RestaurantsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_of_items, container, false);
 
-        ArrayList<Item> items = new ArrayList<Item>();
+        final ArrayList<Item> items = new ArrayList<Item>();
 
         Location churrasqueiraBairradaRestaurant = new Location(getString(R.string.restaurant_churrasqueiraBairradaRestaurant_name));
         churrasqueiraBairradaRestaurant.setLatitude(40.750973);
@@ -73,7 +76,29 @@ public class RestaurantsFragment extends Fragment {
 
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                double latitude = items.get(position).getLocation().getLatitude();
+                double longitude = items.get(position).getLocation().getLongitude();
+                String keyword = items.get(position).getAttraction();
+
+                String data = String.format("geo:%s,%s ?q=%s", latitude, longitude, keyword);
+                Uri geoLocation = Uri.parse(data);
+
+                showMap(geoLocation);
+            }
+        });
+
         return rootView;
     }
 
+    public void showMap(Uri geoLocation) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(geoLocation);
+        if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 }
