@@ -19,6 +19,13 @@ public class ItemAdapter extends ArrayAdapter<Item>{
         super(context, 0, items);
     }
 
+    static class ViewHolder {
+        TextView locatioinTextView;
+        TextView descriptionTextView;
+        TextView addressTextView;
+        ImageView imageView;
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -33,17 +40,16 @@ public class ItemAdapter extends ArrayAdapter<Item>{
         // Get the object located at this position in the list
         Item currentItem = getItem(position);
 
-        TextView locationTextView = (TextView) listItemView.findViewById(R.id.location_textView);
-        locationTextView.setText(currentItem.getAttraction());
+        ViewHolder holder = new ViewHolder();
 
-        TextView descriptionTextView = (TextView) listItemView.findViewById(R.id.description_textView);
-        descriptionTextView.setText(currentItem.getDescription());
-
-        TextView addressTextView = (TextView) listItemView.findViewById(R.id.address_textView);
-        addressTextView.setText(currentItem.getAddress());
-
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.imageView);
-        imageView.setImageResource(currentItem.getImageResourceId());
+        holder.locatioinTextView = (TextView) listItemView.findViewById(R.id.location_textView);
+        holder.locatioinTextView.setText(currentItem.getAttraction());
+        holder.descriptionTextView = (TextView) listItemView.findViewById(R.id.description_textView);
+        holder.descriptionTextView.setText(currentItem.getDescription());
+        holder.addressTextView = (TextView) listItemView.findViewById(R.id.address_textView);
+        holder.addressTextView.setText(currentItem.getAddress());
+        holder.imageView = (ImageView) listItemView.findViewById(R.id.imageView);
+        holder.imageView.setImageResource(currentItem.getImageResourceId());
 
         return listItemView;
     }
