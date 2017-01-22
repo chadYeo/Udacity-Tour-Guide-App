@@ -37,7 +37,7 @@ public class BeachesFragment extends Fragment {
         items.add(new Item(getString(R.string.bar_beach_name),
                 getString(R.string.bar_beach_description),
                 getString(R.string.bar_beach_address),
-                R.raw.bar_beach,
+                R.drawable.bar_beach,
                 barBeach));
 
         Location lidoBeach = new Location(getString(R.string.lido_beach_name));
@@ -47,7 +47,7 @@ public class BeachesFragment extends Fragment {
         items.add(new Item(getString(R.string.lido_beach_name),
                 getString(R.string.lido_beach_description),
                 getString(R.string.lido_beach_address),
-                R.raw.lido_beach,
+                R.drawable.lido_beach,
                 lidoBeach));
 
         Location tobayBeach = new Location(getString(R.string.tobay_beach_name));
@@ -57,7 +57,7 @@ public class BeachesFragment extends Fragment {
         items.add(new Item(getString(R.string.tobay_beach_name),
                 getString(R.string.tobay_beach_description),
                 getString(R.string.tobay_beach_address),
-                R.raw.tobay_beach,
+                R.drawable.tobay_beach,
                 tobayBeach));
 
 

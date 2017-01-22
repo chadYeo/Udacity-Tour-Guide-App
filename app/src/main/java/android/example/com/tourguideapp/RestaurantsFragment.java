@@ -37,7 +37,7 @@ public class RestaurantsFragment extends Fragment {
         items.add(new Item(getString(R.string.restaurant_churrasqueiraBairradaRestaurant_name),
                 getString(R.string.restaurant_churrasqueiraBairradaRestaurant_description),
                 getString(R.string.restaurant_churrasqueiraBairradaRestaurant_address),
-                R.raw.churrasqueira_bairrada_restaurant,
+                R.drawable.churrasqueira_bairrada_restaurant,
                 churrasqueiraBairradaRestaurant));
 
         Location sangria71 = new Location(getString(R.string.restaurant_sangria71_name));
@@ -47,7 +47,7 @@ public class RestaurantsFragment extends Fragment {
         items.add(new Item(getString(R.string.restaurant_sangria71_name),
                 getString(R.string.restaurant_sangria71_description),
                 getString(R.string.restaurant_sangria71_address),
-                R.raw.sangria71,
+                R.drawable.sangria71,
                 sangria71));
 
         Location vincentsClamBar = new Location(getString(R.string.restaurant_vincentsClamBar_name));
@@ -57,7 +57,7 @@ public class RestaurantsFragment extends Fragment {
         items.add(new Item(getString(R.string.restaurant_vincentsClamBar_name),
                 getString(R.string.restaurant_vincentsClamBar_description),
                 getString(R.string.restaurant_vincentsClamBar_address),
-                R.raw.vincents_clam_bar,
+                R.drawable.vincents_clam_bar,
                 vincentsClamBar));
 
         Location plattdeutschePark = new Location(getString(R.string.restaurant_plattdeutschePark_name));
@@ -67,7 +67,7 @@ public class RestaurantsFragment extends Fragment {
         items.add(new Item(getString(R.string.restaurant_plattdeutschePark_name),
                 getString(R.string.restaurant_plattdeutschePark_description),
                 getString(R.string.restaurant_plattdeutschePark_address),
-                R.raw.plattdeutsche_park,
+                R.drawable.plattdeutsche_park,
                 plattdeutschePark));
 
         ListView listView = (ListView) rootView.findViewById(R.id.list);

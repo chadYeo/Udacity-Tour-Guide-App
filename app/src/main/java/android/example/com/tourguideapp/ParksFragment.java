@@ -39,7 +39,7 @@ public class ParksFragment extends Fragment {
         items.add(new Item(getString(R.string.park_bethpage_name),
                 getString(R.string.park_bethpage_description),
                 getString(R.string.park_bethpage_address),
-                R.raw.bethpage_state_park,
+                R.drawable.bethpage_state_park,
                 bethpageStatePark));
 
         Location hempsteadLakeStatePark = new Location(getString(R.string.park_hempsteadLake_name));
@@ -49,7 +49,7 @@ public class ParksFragment extends Fragment {
         items.add(new Item(getString(R.string.park_hempsteadLake_name),
                 getString(R.string.park_hempsteadLake_description),
                 getString(R.string.park_hempsteadLake_address),
-                R.raw.hempstead_lake_state_park,
+                R.drawable.hempstead_lake_state_park,
                 hempsteadLakeStatePark));
 
         Location theodoreRooseveltMemorialpark = new Location(getString(R.string.park_theodoreRoosevelt_name));
@@ -59,7 +59,7 @@ public class ParksFragment extends Fragment {
         items.add(new Item(getString(R.string.park_theodoreRoosevelt_name),
                 getString(R.string.park_theodoreRoosevelt_description),
                 getString(R.string.park_theodoreRoosevelt_address),
-                R.raw.theodore_roosevelt_memorial_park,
+                R.drawable.theodore_roosevelt_memorial_park,
                 theodoreRooseveltMemorialpark));
 
         Location wantaghPark = new Location(getString(R.string.park_wantagh_name));
@@ -69,7 +69,7 @@ public class ParksFragment extends Fragment {
         items.add(new Item(getString(R.string.park_wantagh_name),
                 getString(R.string.park_wantagh_description),
                 getString(R.string.park_wantagh_address),
-                R.raw.wantagh_park,
+                R.drawable.wantagh_park,
                 wantaghPark));
 
         ListView listView = (ListView) rootView.findViewById(R.id.list);

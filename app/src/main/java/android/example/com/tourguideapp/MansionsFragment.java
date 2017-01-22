@@ -39,7 +39,7 @@ public class MansionsFragment extends Fragment {
         items.add(new Item(getString(R.string.mansion_clarkBotanic_name),
                 getString(R.string.mansion_clarkBotanic_description),
                 getString(R.string.mansion_clarkBotanic_address),
-                R.raw.clark_botanic_garden,
+                R.drawable.clark_botanic_garden,
                 clarkBotanicGarden));
 
         Location oldWestburyGardens = new Location(getString(R.string.mansion_oldWestbury_name));
@@ -49,7 +49,7 @@ public class MansionsFragment extends Fragment {
         items.add(new Item(getString(R.string.mansion_oldWestbury_name),
                 getString(R.string.mansion_oldWestbury_description),
                 getString(R.string.mansion_oldWestbury_address),
-                R.raw.old_westbury_gardens,
+                R.drawable.old_westbury_gardens,
                 oldWestburyGardens));
 
         Location sagamoreHill = new Location(getString(R.string.mansion_sagamore_name));
@@ -59,7 +59,7 @@ public class MansionsFragment extends Fragment {
         items.add(new Item(getString(R.string.mansion_sagamore_name),
                 getString(R.string.mansion_sagamore_description),
                 getString(R.string.mansion_sagamore_address),
-                R.raw.sagamore_hill,
+                R.drawable.sagamore_hill,
                 sagamoreHill));
 
         ListView listView = (ListView) rootView.findViewById(R.id.list);
